@@ -1,1 +1,40 @@
-<header>NAVIGATION</header>
+<header class="" id="header">
+  <nav class="container">
+    <div class="nav__header">
+      <a href="/">
+        <img
+          class="nav__header--logo"
+          src="{{navigation.logo}}"
+          alt="{{navigation.logo_alt}}"
+        />
+      </a>
+      <section class="nav__header--icon">
+        <button
+          class="nav__header--toggler"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <span class="sr-only">Menu</span>
+          <svg
+            aria-hidden="true"
+            width="24"
+            height="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="#FFF" fill-rule="evenodd">
+              <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+            </g>
+          </svg>
+        </button>
+      </section>
+    </div>
+
+    <ul class="nav__bar" tabindex="-1">
+      {% for nav in navigation.navs %}
+      <li>
+        <a href="#" class="nav__bar--link nav">{{nav.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
