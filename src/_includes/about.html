@@ -1,4 +1,27 @@
-<section id="about" aria-label="about section">
-  <h2 class="h2">{{about.title}}</h2>
-  <p class="body">{{about.description}}</p>
+<section id="about" class="container" aria-label="about section">
+  <div class="about__image">
+    <picture>
+      <source
+        media="(min-width: 420px)"
+        srcset="/images/desktop/image-interactive.jpg"
+      />
+      <source
+        media="(max-width: 420px)"
+        srcset="/images/mobile/image-interactive.jpg"
+      />
+      <img
+        srcset="
+          /images/desktop/image-interactive.jpg,
+          /images/mobile/image-interactive.jpg
+        "
+        sizes="(min-width: 375px), (max-width: 375px)"
+        src="/images/mobile/image-interactive.jpg"
+        alt="guy with a vr glass"
+      />
+    </picture>
+  </div>
+  <div class="about__text">
+    <h2 class="h2">{{about.title}}</h2>
+    <p class="body text-dark-gray">{{about.description}}</p>
+  </div>
 </section>

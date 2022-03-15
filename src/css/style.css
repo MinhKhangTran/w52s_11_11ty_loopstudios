@@ -164,6 +164,9 @@ ul {
 .text-black {
   color: var(--black);
 }
+.text-dark-gray {
+  color: var(--dark-gray);
+}
 
 /* typography */
 
@@ -309,7 +312,7 @@ header.opened {
 .hero__container {
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 150px);
 }
 .hero__wrapper {
   border: solid white 2px;
@@ -346,6 +349,37 @@ header.opened {
 /* ----------------------------- */
 /* About                         */
 /* ----------------------------- */
+#about {
+  padding-top: 6rem;
+}
+
+.about__text {
+  text-align: center;
+  padding-top: 3rem;
+}
+.about__text h2 {
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  #about {
+    position: relative;
+    padding-top: 10rem;
+  }
+  .about__image {
+    position: relative;
+  }
+  .about__text {
+    position: absolute;
+    width: 50%;
+    padding-left: 6rem;
+    padding-top: 6rem;
+
+    left: 50%;
+    z-index: 2;
+    background-color: var(--white);
+    bottom: 0;
+  }
+}
 /* ----------------------------- */
 /* Creations                     */
 /* ----------------------------- */
