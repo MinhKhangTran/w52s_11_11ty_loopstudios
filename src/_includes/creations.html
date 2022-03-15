@@ -1,3 +1,33 @@
-<section id="creation" aria-label="creation section">
-  <h2 class="h2">{{creation.title}}</h2>
+<section class="container" id="creation" aria-label="creation section">
+  <div class="creation__title">
+    <h2 class="h2">{{creation.title}}</h2>
+    <button type="button" class="btn">{{creations.btnText}}</button>
+  </div>
+  <div class="creation__wrapper">
+    {% for creation in creations.images %}
+    <article class="creation__card">
+      <picture>
+        <source
+          media="(min-width: 420px)"
+          srcset="/images/desktop/{{creation.image}}.jpg"
+        />
+        <source
+          media="(max-width: 420px)"
+          srcset="/images/mobile/{{creation.image}}.jpg"
+        />
+        <img
+          srcset="
+            /images/desktop/{{creation.image}}.jpg,
+            /images/mobile/{{creation.image}}.jpg
+          "
+          sizes="(min-width: 375px), (max-width: 375px)"
+          src="/images/mobile/{{creation.image}}.jpg"
+          alt="{{creation.title}}"
+        />
+      </picture>
+      <h3 class="h3">{{creation.title}}</h3>
+    </article>
+    {% endfor %}
+  </div>
+  <button type="button" class="btn mobile__btn">{{creations.btnText}}</button>
 </section>

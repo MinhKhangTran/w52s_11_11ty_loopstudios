@@ -1,0 +1,46 @@
+{
+  "gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);",
+  "btnText": "See all",
+  "images": [
+    {
+      "id": 1,
+      "title": "Deep Earth",
+      "image": "image-deep-earth"
+    },
+    {
+      "id": 2,
+      "title": "Night arcade",
+      "image": "image-night-arcade"
+    },
+    {
+      "id": 3,
+      "title": "Soccer team vr",
+      "image": "image-soccer-team"
+    },
+    {
+      "id": 4,
+      "title": "The grid",
+      "image": "image-grid"
+    },
+    {
+      "id": 5,
+      "title": "From up above vr",
+      "image": "image-from-above"
+    },
+    {
+      "id": 6,
+      "title": "Pocket Borealis",
+      "image": "image-pocket-borealis"
+    },
+    {
+      "id": 7,
+      "title": "The Curiosity",
+      "image": "image-curiosity"
+    },
+    {
+      "id": 8,
+      "title": "Make it fisheye",
+      "image": "image-fisheye"
+    }
+  ]
+}

@@ -346,6 +346,18 @@ header.opened {
 /* ----------------------------- */
 /* BTN                         */
 /* ----------------------------- */
+button {
+  padding-inline: 2.25rem;
+  padding-block: 0.75rem;
+  border: solid 1px var(--black);
+  background-color: var(--white);
+  transition: all 0.35s ease-in;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
 /* ----------------------------- */
 /* About                         */
 /* ----------------------------- */
@@ -383,6 +395,66 @@ header.opened {
 /* ----------------------------- */
 /* Creations                     */
 /* ----------------------------- */
+#creation {
+  padding-top: 6rem;
+}
+.creation__title {
+  padding-bottom: 3rem;
+}
+.creation__title button {
+  display: none;
+}
+@media (min-width: 768px) {
+  #creation {
+    padding-top: 11.5rem;
+  }
+  .creation__title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5.0625rem;
+  }
+  .creation__title button {
+    display: inline;
+  }
+  .creation__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+  }
+  .creation__card {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.35s ease-in;
+  }
+
+  .creation__card:hover h3 {
+    color: var(--black);
+    z-index: 1000;
+    position: absolute;
+  }
+  .creation__card h3 {
+    position: absolute;
+    color: var(--white);
+    z-index: 1000;
+    left: 40px;
+    bottom: 34px;
+    transition: all 0.25s ease-in;
+  }
+  .creation__card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    transition: background 0.25s ease-in;
+  }
+  .creation__card:hover::after {
+    background: hsl(0 0% 100% / 0.7);
+  }
+
+  .mobile__btn {
+    display: none;
+  }
+}
 /* ----------------------------- */
 /* Footer                         */
 /* ----------------------------- */
