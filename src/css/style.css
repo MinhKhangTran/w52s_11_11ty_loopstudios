@@ -121,7 +121,7 @@ ul {
 .container {
   margin-inline: auto;
   max-width: 1114px;
-  width: 90%;
+  width: 87.2%;
 }
 
 .sr-only {
@@ -196,10 +196,19 @@ ul {
 }
 
 .nav {
-  font-size: var(--body);
-  font-family: var(--ff-body);
-  font-weight: 400;
-  line-height: 21px;
+  font-size: var(--h3);
+  font-family: var(--ff-heading);
+  font-weight: 300;
+  line-height: 97%;
+  text-transform: uppercase;
+}
+@media (min-width: 420px) {
+  .nav {
+    font-size: var(--body);
+    font-family: var(--ff-body);
+    font-weight: 400;
+    line-height: 21px;
+  }
 }
 
 .body {
@@ -222,6 +231,9 @@ ul {
 /* ----------------------------- */
 /* Navigation                    */
 /* ----------------------------- */
+header {
+  padding-top: 1.25rem;
+}
 header.opened {
   background: var(--black);
   position: fixed;
@@ -248,17 +260,17 @@ header.opened {
   position: fixed;
   top: 0;
   display: flex;
-  padding-block: 2rem;
+  justify-content: center;
   width: 100%;
   margin-top: 5rem;
   min-height: calc(100vh - 5rem);
   background-color: var(--black);
-  text-align: center;
+  text-align: left;
   flex-direction: column;
-  padding-inline-start: 0;
+  padding-inline: 5%;
   transform: translateX(-50%);
   left: 50%;
-  z-index: 1000;
+  gap: 1.625rem;
 }
 .nav__bar--link {
   text-decoration: none;
@@ -266,6 +278,9 @@ header.opened {
 }
 
 @media (min-width: 765px) {
+  header {
+    padding-top: 2.5rem;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -277,7 +292,7 @@ header.opened {
 
   .nav__bar {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     margin-block: 0;
   }
 }
