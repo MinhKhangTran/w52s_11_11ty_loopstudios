@@ -1,6 +1,6 @@
 <section class="container" id="creation" aria-label="creation section">
   <div class="creation__title">
-    <h2 class="h2">{{creation.title}}</h2>
+    <h2 class="h2 creation__title--heading">{{creation.title}}</h2>
     <button type="button" class="btn">{{creations.btnText}}</button>
   </div>
   <div class="creation__wrapper">
@@ -29,5 +29,7 @@
     </article>
     {% endfor %}
   </div>
-  <button type="button" class="btn mobile__btn">{{creations.btnText}}</button>
+  <div class="mobile__btn--wrapper">
+    <button type="button" class="btn mobile__btn">{{creations.btnText}}</button>
+  </div>
 </section>

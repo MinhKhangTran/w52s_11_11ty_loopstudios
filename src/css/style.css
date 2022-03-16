@@ -278,6 +278,22 @@ header.opened {
 .nav__bar--link {
   text-decoration: none;
   color: var(--white);
+  position: relative;
+}
+.nav__bar--link::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 1px;
+  background-color: var(--white);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease-in;
+}
+
+.nav__bar--link:hover::after {
+  width: 20px;
 }
 
 @media (min-width: 765px) {
@@ -346,7 +362,7 @@ header.opened {
 /* ----------------------------- */
 /* BTN                         */
 /* ----------------------------- */
-button {
+.btn {
   padding-inline: 2.25rem;
   padding-block: 0.75rem;
   border: solid 1px var(--black);
@@ -354,7 +370,7 @@ button {
   transition: all 0.35s ease-in;
   cursor: pointer;
 }
-button:hover {
+.btn:hover {
   background-color: var(--black);
   color: var(--white);
 }
@@ -401,12 +417,58 @@ button:hover {
 .creation__title {
   padding-bottom: 3rem;
 }
+.creation__title--heading {
+  text-align: center;
+}
 .creation__title button {
   display: none;
+}
+.creation__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+.creation__card {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.35s ease-in;
+}
+.creation__card h3 {
+  position: absolute;
+  color: var(--white);
+  z-index: 1000;
+  left: 20px;
+  bottom: 21px;
+  transition: all 0.35s ease-in;
+}
+.creation__card:hover h3 {
+  color: var(--black);
+  z-index: 1000;
+  position: absolute;
+}
+.creation__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  transition: all 0.35s ease-in;
+}
+.creation__card:hover::after {
+  background: hsl(0 0% 100% / 0.7);
+}
+.mobile__btn--wrapper {
+  display: flex;
+  justify-content: center;
+}
+.mobile__btn {
+  margin-top: 2.25rem;
 }
 @media (min-width: 768px) {
   #creation {
     padding-top: 11.5rem;
+  }
+  .creation__title--heading {
+    text-align: left;
   }
   .creation__title {
     display: flex;
@@ -417,35 +479,29 @@ button:hover {
     display: inline;
   }
   .creation__wrapper {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
   }
-  .creation__card {
-    position: relative;
-    cursor: pointer;
-    transition: all 0.35s ease-in;
-  }
 
-  .creation__card:hover h3 {
-    color: var(--black);
-    z-index: 1000;
-    position: absolute;
-  }
   .creation__card h3 {
     position: absolute;
     color: var(--white);
     z-index: 1000;
     left: 40px;
     bottom: 34px;
-    transition: all 0.25s ease-in;
+    transition: all 0.35s ease-in;
+  }
+  .creation__card:hover h3 {
+    color: var(--black);
+    z-index: 1000;
+    position: absolute;
   }
   .creation__card::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    transition: background 0.25s ease-in;
+    transition: all 0.35s ease-in;
   }
   .creation__card:hover::after {
     background: hsl(0 0% 100% / 0.7);
