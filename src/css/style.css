@@ -205,6 +205,12 @@ ul {
   line-height: 97%;
   text-transform: uppercase;
 }
+.nav__footer {
+  font-size: var(--body);
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 21px;
+}
 @media (min-width: 420px) {
   .nav {
     font-size: var(--body);
@@ -399,6 +405,7 @@ header.opened {
   .about__text {
     position: absolute;
     width: 50%;
+    text-align: left;
     padding-left: 6rem;
     padding-top: 6rem;
 
@@ -514,3 +521,92 @@ header.opened {
 /* ----------------------------- */
 /* Footer                         */
 /* ----------------------------- */
+footer {
+  margin-top: 6rem;
+  padding-block: 3.5rem;
+  padding-inline: 1.75rem;
+}
+.footer__wrapper {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "social"
+    "copy";
+}
+.footer__heading--logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+}
+.footer__socials {
+  grid-area: social;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer__social {
+  position: relative;
+}
+.footer__social::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  width: 0px;
+  height: 1px;
+  background-color: var(--white);
+  left: 0%;
+  transition: all 0.15s ease-in;
+}
+.footer__social:hover::after {
+  width: 24px;
+}
+.footer__nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  padding-block: 1.5rem 2.5rem;
+}
+.footer__copy {
+  grid-area: copy;
+  text-align: center;
+  padding-top: 1.125rem;
+}
+@media (min-width: 420px) {
+  footer {
+    margin-top: 11.5rem;
+    padding-block: 2.75rem;
+  }
+  .footer__wrapper {
+    display: grid;
+    grid-template-areas:
+      "logo social"
+      "nav copy";
+  }
+  .footer__heading--logo {
+    display: inline;
+  }
+  .footer__socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 1.625rem;
+    padding-bottom: 0;
+  }
+  .footer__copy {
+    text-align: right;
+    padding-top: 1.625rem;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+}

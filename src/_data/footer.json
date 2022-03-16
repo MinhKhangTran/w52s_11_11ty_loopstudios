@@ -1,0 +1,49 @@
+{
+  "logo": "/images/logo_footer.svg",
+  "logo_alt": "home",
+  "socials": [
+    {
+      "id": 1,
+      "url": "https://facebook.com",
+      "text": "facebook"
+    },
+    {
+      "id": 2,
+      "url": "https://twitter.com",
+      "text": "twitter"
+    },
+    {
+      "id": 3,
+      "url": "https://pinterest.com",
+      "text": "pinterest"
+    },
+    {
+      "id": 4,
+      "url": "https://instagram.com",
+      "text": "instagram"
+    }
+  ],
+  "navs": [
+    {
+      "id": 1,
+      "title": "About"
+    },
+    {
+      "id": 2,
+      "title": "Careers"
+    },
+    {
+      "id": 3,
+      "title": "Event"
+    },
+    {
+      "id": 4,
+      "title": "Products"
+    },
+    {
+      "id": 5,
+      "title": "Support"
+    }
+  ],
+  "copyright": "© 2021 Loopstudios. All rights reserved."
+}
